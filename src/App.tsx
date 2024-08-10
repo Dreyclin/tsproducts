@@ -1,10 +1,15 @@
 import React from 'react';
 import "./index.css"
+import Product from './components/Product';
+import { products } from './data/products';
+
 
 function App() {
   return (
-    <div className="App">
-      <h1 className='text-3xl font-bold'>Hello world!</h1>
+    <div className="flex items-center flex-col gap-5">
+      {products.map((product) => {
+        return <Product product={product}/>
+      })}
     </div>
   );
 }
